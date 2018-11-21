@@ -4,38 +4,202 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title></title>
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+    <title> Survey Form</title>
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
   </head>
   <body>
-    <div>
-      <h1 id="title">Survey Form </h1>
-      <h3>
-        Let Us know how we can improve Free Code Camp
-      </h3>
+    <header>
+            <h1 id="title">Survey Form </h1>
+      </header>
 
-      <form class="" action="#" method="post">
-         <ul>
-          <li>
-            <label>*Name</label>
-            <input type="text" placeholder="Enter Your Name" name="" value="">
-          </li>
+        <div class="form-design">
+          <p id="description">
+            Let Us know how we can improve Free Code Camp
+          </p>
 
-          <li>
-            <label>*Email</label>
-            <input type="email" name="" placeholder="Enter Your Email" value="">
-          </li>
+          <form class="form-data " action="#" method="post" id="survey-form">
 
-          <li>
-            <label>*Age</label>
-            <input type="text" placeholder="Age" name="" value="">
-          </li>
-         </ul>
-      </form>
-    </div>
+  <!-- input field of User's Name -->
+              <div class="rowTab">
+                  <div class="labels">
+                    <label for="Name" id="name-label">*Name:</label>
+                  </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
+                  <div class="right-tab">
+                    <input type="text"  placeholder="Enter Your Name" name="" id="name" class="input-field form-control" required>
+                  </div>
+              </div>
+
+  <!--input Field of Email ID-->
+              <div class="rowTab">
+                <div class="labels">
+                  <label id="email-label">*Email:</label>
+                </div>
+
+                <div class="right-tab">
+                  <input type="email" required name="email" placeholder="Enter Your Email" class="input-field form-control" value="" id="email">
+                </div>
+              </div>
+
+    <!-- Input field of age -->
+               <div class="rowTab">
+                      <div class="labels">
+                         <label id="number-label" >*Age:</label>
+                      </div>
+                     <div class="right-tab">
+
+                      <input type="number" required min="18" max="80" placeholder="Age" id="number" class="input-field form-control" name="" value="">
+                     </div>
+               </div>
+
+  <!-- dropdown of choosing your role-->
+                 <div class="labels">
+                   <label> which opton best descrbe your current role?</label>
+                 </div>
+
+                 <div class="right-tab">
+                   <select type="dropdown" name="currpos" class="dropdown" id="dropdown" >
+                      <option disabled value> Select an otion</option>
+                      <option value="student">Student</option>
+                      <option value="job">Full Time Job</option>
+                      <option value="learner"> Full Time Learner</option>
+                      <option value="prefer no">prefer no to say</option>
+                      <option value="other"> Other</option>
+                   </select>
+                 </div>
+
+
+  <!-- Usage Of Radio Buttons -->
+                 <div class="labels">
+                   <label>How likely is that you would recommend freeCodeCamp to a friend?</label>
+                 </div>
+
+                 <div class="right-tab radio">
+
+           <!-- use of bootstrap properties for radio buttons-->
+                   <div class="form-check">
+                    <label class="form-check-label radio">
+                       <input type="radio" class="form-check-input " name="1" value="definitely" >  Definitely
+                     </label>
+                   </div>
+
+                   <div class="form-check">
+                      <label class="form-check-label radio">
+                       <input type="radio" class="form-check-input" name="1" value="maybe">  Maybe
+                     </label>
+                   </div>
+
+                   <div class="form-check">
+                     <label class="form-check-label radio">
+                       <input type="radio" class="form-check-input" name="1" value="not sure">  Not Sure
+                     </label>
+                   </div>
+                 </div>
+
+
+    <!-- Again dropdown to know about your favourite thing in freecodecamp-->
+                 <div class="labels">
+                   <label for=""> what do you like most in FCC? </label>
+                 </div>
+
+                  <div class="right-tab">
+                    <select class="dropdown " name="" id="dropdown">
+                      <option disabled value="" >select an option</option>
+                      <option value="challanges"> Challanges</option>
+                      <option value="projects">projects</option>
+                       <option value="community">community</option>
+                       <option value="open source">open source </option>
+                    </select>
+                 </div>
+
+
+  <!-- Checkboxes so that you can choose multiple options-->
+                <div class="labels">
+                   <label>Things that should be improved in the future <br>(Check all that apply) </label>
+                </div>
+                 <div class="right-tab ">
+                   <div class="form-check">
+                     <label class="form-check-label Checkboxes">
+                     <input type="checkbox" class="form-check-input" value="front end projects">Front End Projects
+                     </label>
+                   </div>
+
+                   <div class="form-check">
+                     <label class="form-check-label Checkboxes">
+                     <input type="checkbox" class="form-check-input" value="back end projects">Back End Projects
+                     </label>
+                   </div>
+
+                   <div class="form-check">
+                     <label class="form-check-label Checkboxes">
+                     <input type="checkbox" class="form-check-input" value="data visual">Data Visualization
+                     </label>
+                   </div>
+
+                   <div class="form-check">
+                     <label class="form-check-label Checkboxes">
+                     <input type="checkbox" class="form-check-input" value="challlanges">Challanges
+                     </label>
+                   </div>
+
+                   <div class="form-check">
+                     <label class="form-check-label Checkboxes">
+                     <input type="checkbox" class="form-check-input" value="open source community">Open Source Community
+                     </label>
+                   </div>
+
+                   <div class="form-check">
+                     <label class="form-check-label Checkboxes">
+                     <input type="checkbox" class="form-check-input" value="Gitter help">Gitter help rooms
+                     </label>
+                   </div>
+
+                   <div class="form-check">
+                     <label class="form-check-label Checkboxes">
+                     <input type="checkbox" class="form-check-input" value="videos">videos
+                     </label>
+                   </div>
+
+                   <div class="form-check">
+                     <label class="form-check-label Checkboxes">
+                     <input type="checkbox" class="form-check-input" value="city meetups">city meetups
+                     </label>
+                   </div>
+
+                   <div class="form-check">
+                     <label class="form-check-label Checkboxes">
+                     <input type="checkbox" class="form-check-input" value="wiki">wiki
+                     </label>
+                   </div>
+
+                   <div class="form-check">
+                     <label class="form-check-label Checkboxes">
+                     <input type="checkbox" class="form-check-input" value="forums">forums
+                     </label>
+                   </div>
+
+                   <div class="form-check">
+                     <label class="form-check-label Checkboxes">
+                     <input type="checkbox" class="form-check-input" value="additional courses">Additional courses
+                     </label>
+                   </div>
+                 </div>
+
+
+  <!-- text area to about any improvement or sugestion-->
+               <div class="labels"><label for="">Any comments or suggestion?</label>   </div>
+                 <div class="right-tab">
+                  <textarea type="text" value="" class="comment" placeholder="Enter your comments here....." ></textarea>
+                 </div>
+
+  <!-- Submit button-->
+               <div>
+                  <input type="submit" id="submit">
+               </div>
+
+           </form>
+        </div>
   </body>
 </html>

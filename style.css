@@ -1,11 +1,117 @@
-body {
-  background-color: #a9d7d1;
-  text-align: center;
-  font-family: 'Raleway', Helvetica, sans-serif;
-  min-width: 320px;
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,500);
+
+html,body {
+      background-color: #a9c;
+      text-align: center;
+      font-family: 'Raleway', Helvetica, sans-serif;
+      min-width: 320px;
 }
-.form-data{
-  background-color: white;
-  margin: 40px 150px 20px 150px;
-  border: 20px solid black;
+
+header {
+    font-size: 2em;
+    font-weight: bold;
+    margin: 20px;
+}
+
+.form-design{
+      background-color:#d9d9d9;
+      margin: 0 auto;
+      margin-bottom: 30px;
+      border: 4px;
+      padding-top: 20px;
+      width: 75%;
+      max-width: 900px;
+}
+
+.labels{
+     display: inline-block;
+     text-align: right;
+     width: 30%;
+     padding: 5px;
+     vertical-align: top;
+     margin-top: 10px;
+
+}
+
+.right-tab{
+     display: inline-block;
+     text-align: left;
+     width: 45%;
+     vertical-align: middle;
+     margin-top: 15px;
+
+}
+
+.input-field{
+    height: 25px;
+    width: 280px;
+    padding: 5px;
+    border: 1px solid;
+    margin-left: 10px;
+}
+
+.dropdown{
+    border: 1px solid #c0c0c0;
+    margin-left: 10px;
+    padding: 5px;
+    width: 180px;
+    height: 30px;
+}
+
+.radio,.Checkboxes{
+  margin-left: 10px;
+  position: relative;
+  padding-bottom: 5px;
+}
+
+.comment{
+  width: 300px;
+  height: 60px;
+  margin-left: 10px;
+  margin-top: 5px;
+}
+
+input[type="submit"]{
+  background-color: #4da6ff;
+  color: white;
+  width: 100px;
+  height: 40px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  border: 10 px;
+}
+
+
+/* for different screen sizes*/
+
+@media screen and (max-width:833px) {
+  .input-field {
+    width: 80%;
+  }
+  select {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width:512px) {
+  .input-field {
+    width: 80%;
+  }
+
+  .labels{
+    text-align: left;
+    width: 100%;
+  }
+  .right-tab{
+    float: left;
+    width: 100%;
+  }
+  .comment{
+    width: 250px;
+    float: left;
+  }
+  select {
+    width: 90%;
+  }
 }
